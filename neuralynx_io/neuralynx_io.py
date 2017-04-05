@@ -36,7 +36,7 @@ NEV_RECORD = np.dtype([('stx',           np.int16),      # Reserved
                        ('dummy2',        np.int16),      # Reserved
                        ('Extra',         np.int32, 8),   # Extra bit values for this event. This array has a fixed
                                                          # length of eight (8)
-                       ('EventString',   np.str, 128)])  # Event string associated with this event record. This string
+                       ('EventString',   'S', 128)])  # Event string associated with this event record. This string
                                                          # consists of 127 characters plus the required null termination
                                                          # character. If the string is less than 127 characters, the
                                                          # remainder of the characters will be null.
